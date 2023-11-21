@@ -7,14 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'day5-task-angular';
+
+  customerValueName:any;
+  customerValueUser:any;
+  customerValuePhone:any;
+  customerNumber=1;
   customers: any[]=[
-    {name:"shimaa",
-       username:"ddf",
-        phone:"010000000"
-      }
   ]
 
+
+
   addCustomer(){
-    this.customers.push({name:this.customers[0], username:this.customers[1], phone:this.customers[2]})
+    this.customers.push({number:this.customerNumber++,name:this.customerValueName,
+      username:this.customerValueUser,
+      phone:this.customerValuePhone})
+    console.log(this.customers)
+    console.log(this.customerNumber)
   }
 }
